@@ -1,0 +1,12 @@
+class Solution:
+    def isPalindrome(self, x: int) -> bool:
+        s = str(x)
+        odd = 0
+        if len(s) % 2 != 0:
+            odd = 1        # We are working with an odd number 
+        first = s[0:int(len(s)/2)+odd]
+        second = s[int(len(s)/2):int(len(s))]
+        if first == second[::-1]:
+            return True
+        return False
+        
